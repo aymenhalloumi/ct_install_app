@@ -9,7 +9,13 @@
 <label>Room height (cm): <input name="room_height"></label><br>
 <button type="submit">Run Check</button>
 </form>
-{% if result %}<h3>Result</h3><pre>{{result}}</pre>{% endif %}
+{% if result %}
+<h3>Result</h3>
+<pre>{{result}}</pre>
+{% if chart %}
+<img src="/{{chart}}" alt="chart">
+{% endif %}
+{% endif %}
 <a href="/">Home</a>
 </body>
 </html>
