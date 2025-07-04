@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>CT Install Manager</title></head>
+<body>
+<h1>CT Install Manager</h1>
+<form action="/compare" method="post">
+    <h2>Model Comparison</h2>
+    <select name="model1">
+        {% for m in models %}<option value="{{m}}">{{m}}</option>{% endfor %}
+    </select>
+    <select name="model2">
+        {% for m in models %}<option value="{{m}}">{{m}}</option>{% endfor %}
+    </select>
+    <button type="submit">Compare</button>
+</form>
+<hr>
+<a href="/conformity">Run Conformity Check</a>
+</body>
+</html>
