@@ -3,6 +3,19 @@
 <head><title>CT Install Manager</title></head>
 <body>
 <h1>CT Install Manager</h1>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+    {% for msg in messages %}<li>{{msg}}</li>{% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% if role %}
+Logged in as <strong>{{role}}</strong> - <a href="/logout">Logout</a>
+{% else %}
+<a href="/login">Login</a>
+{% endif %}
 <form action="/compare" method="post">
     <h2>Model Comparison</h2>
     <select name="model1">
