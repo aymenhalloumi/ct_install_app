@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.idea/
+.DS_Store
+webapp/__pycache__/
+webapp/*.pyc
+newwebapp/venv/

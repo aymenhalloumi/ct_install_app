@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><title>Conformity Check</title></head>
+<body>
+<h2>Conformity Check</h2>
+<form method="post">
+<label>Door width (mm): <input name="door_width"></label><br>
+<label>Power (kVA): <input name="power_kva"></label><br>
+<label>Room height (cm): <input name="room_height"></label><br>
+<button type="submit">Run Check</button>
+</form>
+{% if result %}<h3>Result</h3><pre>{{result}}</pre>{% endif %}
+<a href="/">Home</a>
+</body>
+</html>
